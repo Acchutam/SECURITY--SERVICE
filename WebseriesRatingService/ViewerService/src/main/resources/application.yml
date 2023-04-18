@@ -1,0 +1,47 @@
+  spring:
+    datasource:
+      url: jdbc:mysql://localhost:3306/webrating
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+      properties:
+        hibernate:
+            dialect: org.hibernate.dialect.MySQL8Dialect
+      hibernate:
+        ddl-auto: update
+      show-sql : true
+    main:
+       allow-circular-references : true
+    application:
+      name: VIEWER-SERVICE
+  logging:
+    level:
+      org:
+        hibernate:
+          SQL: debug
+
+  jwt:
+    secret : java
+
+
+
+
+
+  eureka:
+    instance:
+      prefer-Ip-Address: true
+    client:
+      prefer-same-zone-eureka: false
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+
+
+
+
+  server:
+    port: 8081
+
+
+
+
